@@ -4,9 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace SeaweedScroll
 {
@@ -23,11 +27,16 @@ namespace SeaweedScroll
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.Configure<MvcOptions>(options => { options.Filters.Add(new RequireHttpsAttribute()); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            var options = new RewriteOptions().AddRedirectToHttps(StatusCodes.Status301MovedPermanently, 5000);
+            app.UseRewriter(options);
+            app.UseHsts(h => h.MaxAge(days: 365).IncludeSubdomains().Preload());
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
