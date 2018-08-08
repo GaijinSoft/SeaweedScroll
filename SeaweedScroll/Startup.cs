@@ -34,7 +34,7 @@ namespace SeaweedScroll
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            var options = new RewriteOptions().AddRedirectToHttps(StatusCodes.Status301MovedPermanently, 5000);
+            var options = new RewriteOptions().AddRedirectToHttps(StatusCodes.Status301MovedPermanently, null);
             app.UseRewriter(options);
             app.UseHsts(h => h.MaxAge(days: 365).IncludeSubdomains().Preload());
             if (env.IsDevelopment())
