@@ -28,16 +28,15 @@ namespace SeaweedScroll
         {
             services.AddMvc();
 
-            //services.Configure<MvcOptions>(options => { options.Filters.Add(new RequireHttpsAttribute()); });
+            services.Configure<MvcOptions>(options => { options.Filters.Add(new RequireHttpsAttribute()); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            // TODO: Allow Let's Encrypt to work
-            //var options = new RewriteOptions().AddRedirectToHttps(StatusCodes.Status301MovedPermanently, null);
-            //app.UseRewriter(options);
-            //app.UseHsts(h => h.MaxAge(days: 365).IncludeSubdomains().Preload());
+            var options = new RewriteOptions().AddRedirectToHttps(StatusCodes.Status301MovedPermanently, null);
+            app.UseRewriter(options);
+            app.UseHsts(h => h.MaxAge(days: 365).IncludeSubdomains().Preload());
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
