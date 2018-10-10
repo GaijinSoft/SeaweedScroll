@@ -71,7 +71,7 @@ body, html {
 }
 
 #banner {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(7, 1fr);
 }
 
