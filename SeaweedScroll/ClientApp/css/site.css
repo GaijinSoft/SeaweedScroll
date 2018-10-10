@@ -15,14 +15,6 @@ body, html {
     margin: 0;
 }
 
-#react-app {
-    background-image: url("../images/ComingSoon.jpeg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
 /* Keep the nav menu independent of scrolling and on top of other items */
 .main-nav {
     display: none;
@@ -31,6 +23,80 @@ body, html {
     left: 0;
     right: 0;
     z-index: 1;
+}
+
+#HomeContent {
+    display: grid;
+    grid-template-rows: repeat(6, minmax(500px, 1fr));
+}
+
+#SeaweedScroll {
+    background-image: url("../images/Samanda.jpg");
+}
+
+#Vision {
+    background-image: url("../images/clouds-dawn-dusk-46253.jpg");
+}
+
+#Journey {
+    background-image: url("../images/ancient-architecture-building-161164.jpg");
+}
+
+#Partner {
+    background-image: url("../images/branch-cherry-blossom-environment-356269.jpg");
+}
+
+#Art {
+    background-image: url("../images/abstract-art-artistic-327509.jpg");
+}
+
+#Contact {
+    background-image: url("../images/beach-bottle-cold-292426.jpg");
+}
+
+.fullRowImg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inspirationRow {
+    font-family: ITCAvantGardeW04-Book;
+    font-size: 5vw;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #69e6f7;
+    padding: 1em;
+    color: white;
+}
+
+#banner {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+#websiteTitle {
+    font-size: 36pt;
+}
+
+.bannerItem {
+    background-image: url("../images/BannerPattern.png");
+    font-size: 24pt;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1em;
+    color: white;
+}
+
+.bannerItem:hover {
+    border: 2px solid white;
+}
+
+#mascotPicture {
+    background-image: url("../images/Noriko.png");
+    background-size: contain;
+    width: 100%;
+    height: auto;
 }
 
 @media (max-width: 767px) {
