@@ -8,12 +8,36 @@ export default class Home extends React.Component<RouteComponentProps<{}>, {}> {
             <div>
                 <Banner />
                 <div id="HomeContent">
-                    <div id="SeaweedScroll" className="fullRowImg inspirationRow">Our Story</div>
-                    <div id="Vision" className="fullRowImg inspirationRow">Vision</div>
-                    <div id="Journey" className="fullRowImg inspirationRow">Journey</div>
-                    <div id="Partner" className="fullRowImg inspirationRow">Partner</div>
-                    <div id="Art" className="fullRowImg inspirationRow">Art</div>
-                    <div id="Contact" className="fullRowImg inspirationRow">Contact</div>
+                    <div id="SupportPage_CrossDawn" className="fullRowImg inspirationPage">
+                        <div className="inspirationRow">
+                            We have been praying for a revival
+                        </div>
+                    </div>
+                    <div id="SupportPage_BloomingRose" className="fullRowImg inspirationPage">
+                        <div className="inspirationRow">
+                            We believe God desires to do something new
+                        </div>
+                    </div>
+                    <div id="SupportPage_Galaxy" className="fullRowImg inspirationPage">
+                        <div className="inspirationRow">
+                            To bring life and hope to a people He loves but who do not know Him
+                        </div>
+                    </div>
+                    <div id="SupportPage_BeachBottle" className="fullRowImg inspirationPage">
+                        <div className="inspirationRow">
+                            His story must be told but we need story-tellers
+                        </div>
+                    </div>
+                    <div id="SupportPage_BoardGame" className="fullRowImg inspirationPage">
+                        <div className="inspirationRow">
+                            Will you partner with us?
+                        </div>
+                    </div>
+                    <div id="SupportPage_HikingView" className="fullRowImg inspirationPage">
+                        <div className="inspirationRow">
+                            And join us for a journey that will last forever
+                        </div>
+                    </div>
                 </div>
             </div>
         );

@@ -25,17 +25,68 @@ body, html {
     z-index: 1;
 }
 
+.fullRowImg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.inspirationRow {
+    position: relative;
+    font-family: ITCAvantGardeW04-Book;
+    font-size: 7vmax;
+    color: white;
+    overflow-x: hidden;
+}
+
 #HomeContent {
     display: grid;
-    grid-template-rows: repeat(6, minmax(500px, 1fr));
+    grid-template-rows: repeat(6, 100vh);
 }
 
-#SeaweedScroll {
-    background-image: url("../images/Samanda.jpg");
+.inspirationPage {
+    display: grid;
+    grid-template-columns: repeat(16, 6vw);
+    grid-template-rows: repeat(16, 6vh);
 }
 
-#Vision {
-    background-image: url("../images/clouds-dawn-dusk-46253.jpg");
+.inspirationPage .inspirationRow {
+    grid-column: 2/16;
+    grid-row: 2/16;
+}
+
+#SupportPage_CrossDawn {
+    background-image: url("../images/cross-dawn-dusk-53959.jpg");
+}
+
+#SupportPage_CrossDawn .inspirationRow {
+    grid-column: 2/10;
+}
+
+#SupportPage_BloomingRose {
+    background-image: url("../images/background-beautiful-bloom-459305.jpg");
+}
+
+#SupportPage_Galaxy {
+    background-image: url("../images/dark-galaxy-wallpaper-night-32237.jpg");
+}
+
+#SupportPage_BeachBottle {
+    background-image: url("../images/beach-bottle-cold-292426.jpg");
+}
+
+#SupportPage_BoardGame {
+    background-image: url("../images/battle-board-game-challenge-209640.jpg");
+}
+
+#SupportPage_HikingView {
+    background-image: url("../images/active-activity-adventure-547116.jpg");
+}
+
+#SupportPage_Silhouette {
+    background-image: url("../images/action-backlit-beach-1046896.jpg");
 }
 
 #Journey {
@@ -52,22 +103,6 @@ body, html {
 
 #Contact {
     background-image: url("../images/beach-bottle-cold-292426.jpg");
-}
-
-.fullRowImg {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.inspirationRow {
-    font-family: ITCAvantGardeW04-Book;
-    font-size: 5vw;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: #69e6f7;
-    padding: 1em;
-    color: white;
 }
 
 #banner {
@@ -101,8 +136,8 @@ body, html {
 
 @media (max-width: 767px) {
     /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
-    body {
-        padding-top: 50px;
+    .inspirationRow {
+        font-size: 9vmax;
     }
 }
 
