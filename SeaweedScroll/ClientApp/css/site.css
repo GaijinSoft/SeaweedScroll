@@ -99,8 +99,51 @@ body, html {
     grid-template-rows: repeat(2, 100vh);
 }
 
-#SupportPage_HowCanIHelp {
-    border: 2px solid green;
+#SupportPage_HowCanIHelpDescription {
+    font-family: proxima-nova, sans-serif;
+    margin-left: 50px;
+}
+
+#SupportPage_GiveSection {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 30em);
+}
+
+#SupportPage_TripCost {
+    padding-left: 30px;
+    margin-bottom: 15px;
+}
+
+#SupportPage_TripCost_Number {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+.SupportPage_HowCanIHelp_SubDescription {
+    font-size: 1.2em;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+.SupportPage_HowCanIHelp_SubDescription li {
+    padding-bottom: 5px;
+}
+
+.MailingAddress {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    font-style: italic;
+}
+
+.SupportPage_HowCanIHelp_SubHeader {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 .SupportPage_Samanda {
