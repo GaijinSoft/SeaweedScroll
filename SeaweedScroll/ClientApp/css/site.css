@@ -94,25 +94,32 @@ body, html {
     text-align: center;
 }
 
+#SupportPage_HowCanIHelp {
+    background-color: #88caed;
+    color: black;
+}
+
+#SupportPage_HowCanIHelp .SupportPage_SectionHeader {
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
 #SupportPage_OurStoryDescription {
     display: grid;
     grid-template-rows: repeat(2, 100vh);
 }
 
 #SupportPage_HowCanIHelpDescription {
-    font-family: proxima-nova, sans-serif;
-    margin-left: 50px;
+    display: grid;
+    grid-template-columns: 5vw 43vw 3vw 3vw 43vw;
 }
 
 #SupportPage_GiveSection {
     margin-top: 30px;
     margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 30em);
 }
 
 #SupportPage_TripCost {
-    padding-left: 30px;
     margin-bottom: 15px;
 }
 
@@ -123,8 +130,13 @@ body, html {
     font-weight: bold;
 }
 
+.divider {
+    margin-bottom: 10px;
+    border-right: 2px solid white;
+}
+
 .SupportPage_HowCanIHelp_SubDescription {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-left: 10px;
     padding-bottom: 10px;
 }

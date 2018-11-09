@@ -65,42 +65,48 @@ export default class Home extends React.Component<RouteComponentProps<{}>, {}> {
                             How can I help?
                         </div>
                         <div id="SupportPage_HowCanIHelpDescription">
-                            <div className="SupportPage_HowCanIHelp_SubHeader">
-                                Pray
-                            </div>
-                            <div className="SupportPage_HowCanIHelp_SubDescription">
-                                We need supporters who will pray for one or more important prayer points for our vision trip.
-                            </div>
-                            <ul className="SupportPage_HowCanIHelp_SubDescription">
-                                <li><b>Direction + Clarity</b> -- <i>A clear purpose and opportunity for the future</i></li>
-                                <li><b>Community</b> -- <i>Ministry partners + deep, intimate friendships</i></li>
-                                <li><b>Location</b> -- <i>Tokyo is huge! Where is God calling us to make our home</i></li>
-                                <li><b>Spiritual Warfare</b> -- <i>For God to go before us to clear our path</i></li>
-                                <li><b>Travel + Health</b> -- <i>Safe travels and healthiness throughout our trip</i></li>
-                                <li><b>Financial Support</b> -- <i>The Church body to help support our mission efforts</i></li>
-                            </ul>
-                            <div className="paragraphSeparator" />
-                            <div className="SupportPage_HowCanIHelp_SubHeader">
-                                Give
-                            </div>
-                            <div className="SupportPage_HowCanIHelp_SubDescription">
-                                We also need supporters who are able to partner with us financially.
-                            </div>
-                            <div id="SupportPage_GiveSection">
-                                <div id="SupportPage_TripCost" className="SupportPage_HowCanIHelp_SubDescription">
-                                    <div><b>Total trip cost:</b></div>    
-                                    <div id="SupportPage_TripCost_Number">$4679</div>
+                            <div />
+                            <div id="SupportPage_HowCanIHelp_Pray">
+                                <div className="SupportPage_HowCanIHelp_SubHeader">
+                                    Pray
                                 </div>
                                 <div className="SupportPage_HowCanIHelp_SubDescription">
-                                    <b>Mail checks to:</b>
-                                    <div className="MailingAddress">
-                                        Beyond, PO Box 831539,
-                                        Richardson, TX 75083
+                                    We need supporters who will pray for one or more important prayer points for our vision trip.
+                                </div>
+                                <ul className="SupportPage_HowCanIHelp_SubDescription">
+                                    <li><b>Direction + Clarity</b> -- <i>A clear purpose and opportunity for the future</i></li>
+                                    <li><b>Community</b> -- <i>Ministry partners + deep, intimate friendships</i></li>
+                                    <li><b>Location</b> -- <i>Tokyo is huge! Where is God calling us to make our home</i></li>
+                                    <li><b>Spiritual Warfare</b> -- <i>For God to go before us to clear our path</i></li>
+                                    <li><b>Travel + Health</b> -- <i>Safe travels and healthiness throughout our trip</i></li>
+                                    <li><b>Financial Support</b> -- <i>The Church body to help support our mission efforts</i></li>
+                                </ul>
+                                <div className="paragraphSeparator" />
+                            </div>
+                            <div className="divider" />
+                            <div />
+                            <div id="SupportPage_HowCanIHelp_Give">
+                                <div className="SupportPage_HowCanIHelp_SubHeader">
+                                    Give
+                                </div>
+                                <div className="SupportPage_HowCanIHelp_SubDescription">
+                                    We also need supporters who are able to partner with us financially.
+                                </div>
+                                <div id="SupportPage_GiveSection">
+                                    <div id="SupportPage_TripCost" className="SupportPage_HowCanIHelp_SubDescription">
+                                        <div><b>Total trip cost: $4,679</b></div>
+                                    </div>
+                                    <div className="SupportPage_HowCanIHelp_SubDescription">
+                                        <b>Mail checks to:</b>
+                                        <div className="MailingAddress">
+                                            Beyond, PO Box 831539,
+                                            Richardson, TX 75083
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="SupportPage_HowCanIHelp_SubDescription">
-                                Please make all checks out to <b>Beyond</b> with a memo of <b>SAR1801</b>
+                                <div className="SupportPage_HowCanIHelp_SubDescription">
+                                    Please make all checks out to <b>Beyond</b> with a memo of <b>SAR1801</b>
+                                </div>
                             </div>
                         </div>
                     </div>
