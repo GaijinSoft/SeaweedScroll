@@ -233,6 +233,10 @@ body, html {
 }
 
 @media (max-width: 767px) {
+    .SupportPage_HowCanIHelp_SubDescription {
+        font-size: 1.2em;
+    }
+
     /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
     .inspirationRow {
         font-size: 9vmax;
