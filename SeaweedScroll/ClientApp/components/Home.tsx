@@ -94,7 +94,7 @@ export default class Home extends React.Component<RouteComponentProps<{}>, {}> {
                                 </div>
                                 <div id="SupportPage_GiveSection">
                                     <div id="SupportPage_TripCost" className="SupportPage_HowCanIHelp_SubDescription">
-                                        <div><b>Total trip cost: $4,679</b></div>
+                                        <div><b>Total trip cost: $4,754</b></div>
                                     </div>
                                     <div className="SupportPage_HowCanIHelp_SubDescription">
                                         <b>Mail checks to:</b>
