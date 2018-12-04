@@ -1,12 +1,12 @@
-import * as React from 'react';
+﻿import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { Banner } from './Banner';
 
-export default class Home extends React.Component<RouteComponentProps<{}>, {}> {
+export default class NotFound extends React.Component<RouteComponentProps<{}>, {}> {
     public render() {
         return (
             <div>
-                Hi there!
+                Not Found! 404!
             </div>
         );
     }
