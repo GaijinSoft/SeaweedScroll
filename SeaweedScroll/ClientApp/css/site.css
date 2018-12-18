@@ -232,6 +232,10 @@ body, html {
     height: auto;
 }
 
+html, body, #app, #app>div, #react-app, #react-app>div {
+    height: 100% !important;
+}
+
 @media (max-width: 767px) {
     .SupportPage_HowCanIHelp_SubDescription {
         font-size: 1.2em;
