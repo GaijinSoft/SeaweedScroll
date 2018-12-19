@@ -8,8 +8,6 @@
 #BannerImg {
     grid-column: 2 / span 16;
     grid-row: 1/2;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .centeredEntryData {
@@ -25,9 +23,14 @@
 
 #EntryInfo {
     grid-row: 3/4;
+}
+
+.captionText {
     color: #999;
     font-style: italic;
     font-family: "Roboto Condensed";
+    grid-column: 1/20;
+    text-align: center;
 }
 
 #titleSeparator {
@@ -35,6 +38,8 @@
 }
 
 #EntryContent {
+    display: grid;
+    grid-template-columns: repeat(16, 6vw);
     grid-row: 5/6;
     grid-column: 2/18;
     font-size: 16px;
@@ -43,13 +48,9 @@
 
 .EntryParagraph {
     padding-top: 30px;
+    grid-column: 1/16;
 }
 
-.EntryPhoto {
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*grid-column: 7/13;*/
-    margin: auto;
-    width: 50%;
-    padding: 10px;
+.EntryPhotoContainer {
+    grid-column: 4/14;
 }

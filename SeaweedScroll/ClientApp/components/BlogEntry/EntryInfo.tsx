@@ -7,7 +7,7 @@ export class EntryInfo extends React.Component<any,any> {
 
     render() {
         return (
-            <div id="EntryInfo" className="centeredEntryData">
+            <div id="EntryInfo" className="captionText">
                 {this.props.stringDate}
             </div>
         );

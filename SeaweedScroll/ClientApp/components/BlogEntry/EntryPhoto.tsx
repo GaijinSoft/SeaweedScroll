@@ -14,7 +14,10 @@ export class EntryPhoto extends Image {
             //'width': `${this.props.width || defaultWidth}`
         }
         return (
-            <Image styleName="EntryPhoto centeredEntryData" src={this.props.src} styles={styles} />
+            <div className="EntryPhotoContainer">
+                <Image styleName="centeredEntryData" src={this.props.src} styles={styles} />
+                <div className="captionText">{this.props.caption}</div>
+            </div>
         );
     }
 }
