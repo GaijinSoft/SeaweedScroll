@@ -13,7 +13,7 @@ export interface IEntryState {
 
 export interface IEntry {
     id: number;
-    bannerImagePartialPath: string;
+    bannerImageFileName: string;
     title: string;
     stringDate: string;
     entryContentContainer: IEntryContentContainer;
@@ -34,7 +34,7 @@ export interface IEntryParagraph extends IEntryContent {
 
 export interface IEntryPhoto extends IEntryContent {
     type: string;
-    partialPath: string;
+    fileName: string;
     caption: string;
 }
 

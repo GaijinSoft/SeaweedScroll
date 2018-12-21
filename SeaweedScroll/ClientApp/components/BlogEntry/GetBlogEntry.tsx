@@ -35,26 +35,26 @@ class GetBlogEntry extends React.Component<BlogInfoProps, {}> {
     public render() {
         if (this.props && this.props.entries && this.props.entries.length > 0) {
             var entry = this.props.entries[0];
+            var bannerImg = require(`../../images/${entry.bannerImageFileName}`);
             var entryContents = entry.entryContentContainer.entryContents;
-            //var entryContentList = [];
-            //for (var i = 0; i < entryContents.length; ++i) {
-            //    if (entryContents[i].Type === "EntryParagraph")
-            //        entryContentList.push(<EntryParagraph (entryContents[i] as EntryParagraph).text
-            //}
+            var entryContentList = [];
+            for (var i = 0; i < entryContents.length; ++i) {
+                if (entryContents[i].type === "EntryParagraph")
+                    entryContentList.push(<EntryParagraph>{(entryContents[i] as IEntryParagraph).text}</EntryParagraph>);
+                else { // if (entryContents[i].type === "EntryPhoto")
+                    var entryPhoto = (entryContents[i] as IEntryPhoto);
+                    const src = require(`../../images/${entryPhoto.fileName}`);
+                    entryContentList.push(<EntryPhoto src={src} caption={entryPhoto.caption}/>);
+                }
+            }
             return (
                 <BlogEntry>
-                    <BannerImage src={entry.bannerImagePartialPath} />
+                    <BannerImage src={bannerImg} />
                     <Title>{entry.title}</Title>
                     <EntryInfo stringDate={entry.stringDate} />
                     <hr id="titleSeparator" />
                     <EntryContent>
-                        <EntryParagraph>
-                            {(entryContents[0] as IEntryParagraph).text}
-                        </EntryParagraph>
-                        <EntryParagraph>
-                            {(entryContents[1] as IEntryParagraph).text}
-                        </EntryParagraph>
-                        <EntryPhoto src={(entryContents[2] as IEntryPhoto).partialPath} caption={(entryContents[2] as IEntryPhoto).caption} />
+                        {entryContentList}
                     </EntryContent>
                 </BlogEntry>
             );

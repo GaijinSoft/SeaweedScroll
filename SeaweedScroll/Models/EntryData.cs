@@ -9,7 +9,7 @@ namespace SeaweedScroll.Models
             new Entry()
             {
                 Id = 20181219,
-                BannerImagePartialPath = "../../images/ball-blur-bokeh-717988.jpg",
+                BannerImageFileName = "ball-blur-bokeh-717988.jpg",
                 Title = "Christmas Update",
                 StringDate = "December 16, 2018",
                 EntryContentContainer = new EntryContentContainer()
@@ -27,7 +27,7 @@ namespace SeaweedScroll.Models
                         new EntryPhoto()
                         {
                             Caption = "A photo of our favorite place",
-                            PartialPath = "../../images/ball-blur-bokeh-717988.jpg"
+                            FileName = "ball-blur-bokeh-717988.jpg"
                         }
                     }
                 }

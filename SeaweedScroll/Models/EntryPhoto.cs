@@ -6,7 +6,7 @@
         {
             get { return "EntryPhoto"; }
         }
-        public string PartialPath { get; set; }
+        public string FileName { get; set; }
         public string Caption { get; set; }
     }
 }
