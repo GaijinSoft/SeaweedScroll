@@ -17,27 +17,7 @@ export class BlogEntry extends React.Component {
     render() {
         return (
             <div id="BlogEntry">
-                <BannerImage src={img} />
-                <Title>
-                    Christmas Update
-                    <NavLink to={ '/Adventures' } activeClassName='active'>
-                        <span className='glyphicon glyphicon-th-list'></span> Adventures
-                    </NavLink>
-                    <NavLink to={'/fetchdata'} activeClassName='active'>
-                        <span className='glyphicon glyphicon-th-list'></span> Fetch data
-                    </NavLink>
-                </Title>
-                <EntryInfo stringDate="December 16, 2018" />
-                <hr id="titleSeparator" />
-                <EntryContent>
-                    <EntryParagraph>
-                        We've done a lot this year
-                    </EntryParagraph>
-                    <EntryParagraph>
-                        It's been a lot of fun
-                    </EntryParagraph>
-                    <EntryPhoto src={img} caption="A photo of our favorite place" />
-                </EntryContent>
+                {this.props.children}
             </div>
         );
     }

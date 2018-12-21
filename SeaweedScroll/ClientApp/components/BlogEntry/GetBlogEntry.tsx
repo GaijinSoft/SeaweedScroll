@@ -2,6 +2,7 @@
 import { RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { ApplicationState } from '../../store';
+import { BlogEntry } from './BlogEntry';
 import * as EntryState from '../../store/BlogInfo';
 
 // At runtime, Redux will merge together...
@@ -24,14 +25,13 @@ class GetBlogEntry extends React.Component<BlogInfoProps, {}> {
     }
 
     public render() {
-        return (
-            <div>
-                {this.props.entry}
-            </div>
-        );
-        }
+        if (this.props && this.props.entries && this.props.entries.length > 0)
+            return <BlogEntry>{this.props.entries[0].blogJsx}</BlogEntry>;
+        else
+            return <div>Sorry dude</div>;
     }
-    
+}
+
 export default connect(
         (state: ApplicationState) => state.blogEntry,        // Selects which state properties are merged into the component's props
         EntryState.actionCreators                            // Selects which action creators are merged into the component's props

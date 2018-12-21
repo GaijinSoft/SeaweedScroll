@@ -31,20 +31,19 @@ namespace SeaweedScroll.Controllers
         };
 
         [HttpGet("[action]")]
-        public Entry BlogEntry(int entryDateId)
+        public IEnumerable<Entry> BlogEntry(int entryDateId)
         {
-            return new Entry()
+            List<Entry> entries = new List<Entry>();
+            Entry newEntry = new Entry()
             {
-                BlogJsx = _entries[entryDateId == 0 ? 20181219 : entryDateId],
-                ThumbnailPath = "../../images/ball-blur-bokeh-717988.jpg",
-                Title = "Christmas Update"
+                BlogJsx = _entries[entryDateId == 0 ? 20181219 : entryDateId]
             };
+            entries.Add(newEntry);
+            return entries;
         }
 
         public class Entry
         {
-            public string ThumbnailPath { get; set; }
-            public string Title { get; set; }
             public string BlogJsx { get; set; }
         }
     }

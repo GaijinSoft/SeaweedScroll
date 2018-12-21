@@ -8,12 +8,10 @@ import { AppThunkAction } from './';
 export interface EntryState {
     isLoading: boolean;
     entryDateId?: number;
-    entry: Entry;
+    entries: Entry[];
 }
 
 export interface Entry {
-    thumbnailPath: string;
-    title: string;
     blogJsx: string;
 }
 
@@ -34,7 +32,7 @@ interface RequestBlogEntryAction {
 interface ReceiveBlogEntryAction {
     type: 'RECEIVE_BLOG_ENTRY';
     entryDateId: number;
-    entry: Entry;
+    entries: Entry[];
 }
 
 //interface ReceiveAllBlogEntriesAction {
@@ -55,9 +53,9 @@ export const actionCreators = {
         // Only load data if it's something we don't already have (and are not already loading)
         if (entryDateId !== getState().blogEntry.entryDateId) {
             let fetchTask = fetch(`api/BlogData/BlogEntry?entryDateId=${entryDateId}`)
-                .then(response => response.json() as Promise<Entry>)
+                .then(response => response.json() as Promise<Entry[]>)
                 .then(data => {
-                    dispatch({ type: 'RECEIVE_BLOG_ENTRY', entryDateId: entryDateId, entry: data });
+                    dispatch({ type: 'RECEIVE_BLOG_ENTRY', entryDateId: entryDateId, entries: data });
                 });
 
             addTask(fetchTask); // Ensure server-side prerendering waits for this to complete
@@ -69,7 +67,7 @@ export const actionCreators = {
 // ----------------
 // REDUCER - For a given state and action, returns the new state. To support time travel, this must not mutate the old state.
 
-const unloadedState: EntryState = { entry: {} as Entry, isLoading: false };
+const unloadedState: EntryState = { entries: [], isLoading: false };
 
 
 export const reducer: Reducer<EntryState> = (state: EntryState, incomingAction: Action) => {
@@ -79,7 +77,7 @@ export const reducer: Reducer<EntryState> = (state: EntryState, incomingAction: 
             return {
                 isLoading: true,
                 entryDateId: action.entryDateId,
-                entry: state.entry
+                entries: state.entries
             };
         case 'RECEIVE_BLOG_ENTRY':
             // Only accept the incoming data if it matches the most recent request. This ensures we correctly
@@ -88,7 +86,7 @@ export const reducer: Reducer<EntryState> = (state: EntryState, incomingAction: 
                 return {
                     isLoading: false,
                     entryDateId: action.entryDateId,
-                    entry: action.entry
+                    entries: action.entries
                 };
             }
             break;
