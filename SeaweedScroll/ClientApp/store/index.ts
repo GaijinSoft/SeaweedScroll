@@ -5,7 +5,7 @@ import * as BlogInfo from './BlogInfo';
 // The top-level state object
 export interface ApplicationState {
     counter: Counter.CounterState;
-    blogEntry: BlogInfo.EntryState;
+    blogEntry: BlogInfo.IEntryState;
     weatherForecasts: WeatherForecasts.WeatherForecastsState;
 }
 

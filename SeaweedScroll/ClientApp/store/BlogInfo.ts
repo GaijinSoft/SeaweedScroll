@@ -5,14 +5,37 @@ import { AppThunkAction } from './';
 // -----------------
 // STATE - This defines the type of data maintained in the Redux store.
 
-export interface EntryState {
+export interface IEntryState {
     isLoading: boolean;
     entryDateId?: number;
-    entries: Entry[];
+    entries: IEntry[];
 }
 
-export interface Entry {
-    blogJsx: string;
+export interface IEntry {
+    id: number;
+    bannerImagePartialPath: string;
+    title: string;
+    stringDate: string;
+    entryContentContainer: IEntryContentContainer;
+}
+
+export interface IEntryContentContainer {
+    entryContents: IEntryContent[];
+}
+
+export interface IEntryContent {
+    type: string;
+}
+
+export interface IEntryParagraph extends IEntryContent {
+    type: string;
+    text: string;
+}
+
+export interface IEntryPhoto extends IEntryContent {
+    type: string;
+    partialPath: string;
+    caption: string;
 }
 
 // -----------------
@@ -32,7 +55,7 @@ interface RequestBlogEntryAction {
 interface ReceiveBlogEntryAction {
     type: 'RECEIVE_BLOG_ENTRY';
     entryDateId: number;
-    entries: Entry[];
+    entries: IEntry[];
 }
 
 //interface ReceiveAllBlogEntriesAction {
@@ -53,7 +76,7 @@ export const actionCreators = {
         // Only load data if it's something we don't already have (and are not already loading)
         if (entryDateId !== getState().blogEntry.entryDateId) {
             let fetchTask = fetch(`api/BlogData/BlogEntry?entryDateId=${entryDateId}`)
-                .then(response => response.json() as Promise<Entry[]>)
+                .then(response => response.json() as Promise<IEntry[]>)
                 .then(data => {
                     dispatch({ type: 'RECEIVE_BLOG_ENTRY', entryDateId: entryDateId, entries: data });
                 });
@@ -67,10 +90,10 @@ export const actionCreators = {
 // ----------------
 // REDUCER - For a given state and action, returns the new state. To support time travel, this must not mutate the old state.
 
-const unloadedState: EntryState = { entries: [], isLoading: false };
+const unloadedState: IEntryState = { entries: [], isLoading: false };
 
 
-export const reducer: Reducer<EntryState> = (state: EntryState, incomingAction: Action) => {
+export const reducer: Reducer<IEntryState> = (state: IEntryState, incomingAction: Action) => {
     const action = incomingAction as KnownAction;
     switch (action.type) {
         case 'REQUEST_BLOG_ENTRY':
