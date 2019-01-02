@@ -10,7 +10,7 @@ import Counter from './components/Counter';
 
 export const routes = <Layout>
     <Switch>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/' component={GetBlogEntry} />
         <Route path='/Support' component={Support} />
         <Route path='/Adventures/:entryDateId?' component={GetBlogEntry} />
         <Route path='/fetchdata/:startDateIndex?' component={ FetchData } />
