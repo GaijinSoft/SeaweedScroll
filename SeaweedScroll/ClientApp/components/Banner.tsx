@@ -1,4 +1,5 @@
-﻿import * as React from 'react'; 
+﻿import * as React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export class Banner extends React.Component {
     constructor(props: any) {
@@ -8,13 +9,8 @@ export class Banner extends React.Component {
     render() {
         return (
             <div id="banner">
-                <div id="mascotPicture" className="fullRowImg" />
-                <div id="websiteTitle">Seaweed Scroll</div>
-                <div id="vision" className="bannerItem">Vision</div>
-                <div id="journey" className="bannerItem">Journey</div>
-                <div id="partner" className="bannerItem">Partner</div>
-                <div id="art" className="bannerItem">Art</div>
-                <div id="contact" className="bannerItem">Contact</div>
+                <NavLink className="navbarLink" to="/Support">Support</NavLink>
+                <NavLink className="navbarLink" to="/Adventures">Story</NavLink>
             </div>
         );
     }
