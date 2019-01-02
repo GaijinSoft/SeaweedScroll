@@ -14,13 +14,6 @@ namespace SeaweedScroll.Controllers
         public IEnumerable<Entry> BlogEntry(int entryDateId)
         {
             return EntryData.Entries;
-            //List<Entry> entries = new List<Entry>();
-            //Entry newEntry = new Entry()
-            //{
-            //    BlogJsx = _entries[entryDateId == 0 ? 20181219 : entryDateId]
-            //};
-            //BlogEntryData.Entries.Add(newEntry);
-            //return entries;
         }
     }
 }

@@ -6,6 +6,7 @@ namespace SeaweedScroll.Models
     {
         public static List<Entry> Entries = new List<Entry>()
         {
+            #region Christmas Update
             new Entry()
             {
                 Id = 20181219,
@@ -32,6 +33,7 @@ namespace SeaweedScroll.Models
                     }
                 }
             }
+            #endregion
         };
     }
 }
