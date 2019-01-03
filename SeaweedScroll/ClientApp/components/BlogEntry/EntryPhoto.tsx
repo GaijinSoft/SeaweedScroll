@@ -7,12 +7,11 @@ export class EntryPhoto extends Image {
     }
 
     render() {
-        const defaultHeight = "800px";
-        const defaultWidth = "800px";
+        const defaultHeight = "25vw";
+        const height = this.props.height; //document.documentElement.clientWidth < 767 ? this.props.cellHeight : this.props.height;
         const styles = {
-            'height': `${this.props.height || defaultHeight}`
-            //'width': `${this.props.width || defaultWidth}`
-        }
+            'height': `${height || defaultHeight}`
+        };
         return (
             <div className="EntryPhotoContainer">
                 <Image styleName="centeredEntryData" src={this.props.src} styles={styles} />

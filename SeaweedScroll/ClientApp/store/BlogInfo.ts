@@ -36,6 +36,7 @@ export interface IEntryPhoto extends IEntryContent {
     type: string;
     fileName: string;
     caption: string;
+    height: string;
 }
 
 // -----------------

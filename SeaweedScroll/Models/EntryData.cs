@@ -19,7 +19,7 @@ namespace SeaweedScroll.Models
                     {
                         new EntryParagraph()
                         {
-                            Text = "We've done a lot this year. MORE THAN WE'VE EVER DONE BEFORE!!!"
+                            Text = "We've done a lot this year. MORE THAN WE'VE EVER DONE BEFORE!!!jaslkdfjlkasjdflkjasdlkfjlkasdjflkjasdlkfjalksd fkljasdklfjaklsdjfklajlsdfkajsdlfjkasdlfk jaslkdfjlaskdfjlkasdj flkasjdklfjalskdf jklasdjfklasjdf"
                         },
                         new EntryParagraph()
                         {
@@ -28,7 +28,12 @@ namespace SeaweedScroll.Models
                         new EntryPhoto()
                         {
                             Caption = "A photo of our favorite place",
-                            FileName = "ball-blur-bokeh-717988.jpg"
+                            FileName = "ball-blur-bokeh-717988.jpg",
+                            Height = "25vw"
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "Hi there again!"
                         }
                     }
                 }

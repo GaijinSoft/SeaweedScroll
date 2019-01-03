@@ -8,5 +8,6 @@
         }
         public string FileName { get; set; }
         public string Caption { get; set; }
+        public string Height { get; set; }
     }
 }

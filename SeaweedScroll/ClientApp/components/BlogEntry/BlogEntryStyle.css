@@ -1,8 +1,7 @@
 ﻿#BlogEntry {
     display: grid;
     grid-template-columns: 2vw repeat(16, 6vw) 2vw;
-    grid-template-rows: 85vh 10vh 5vh 1vh 100vh;
-    height: 100%;
+    grid-template-rows: 40vw 5vw 1vw 5vw 40vw;
 }
 
 #BannerImg {
@@ -17,11 +16,12 @@
 
 #Title {
     grid-row: 2/3;
-    font-size: 64px;
+    font-size: 4vw;
     font-family: 'Open Sans', sans-serif;
 }
 
 #EntryInfo {
+    font-size: 1vw;
     grid-row: 3/4;
 }
 
@@ -42,15 +42,34 @@
     grid-template-columns: repeat(16, 6vw);
     grid-row: 5/6;
     grid-column: 2/18;
-    font-size: 16px;
     font-family: "Roboto Condensed";
 }
 
 .EntryParagraph {
-    padding-top: 30px;
-    grid-column: 1/16;
+    grid-column: 2/15;
+    font-size: 1.5vw;
 }
 
 .EntryPhotoContainer {
     grid-column: 4/14;
+}
+
+@media (max-width: 767px) {
+    #BlogEntry {
+        grid-template-rows: 60vw 12vw 6vw 5vw 65vw;
+    }
+
+    #Title {
+        font-size: 10vw;
+    }
+
+    #EntryInfo {
+        font-size: 2.5vw;
+    }
+
+    .EntryParagraph {
+        padding-top: 30px;
+        grid-column: 1/16;
+        font-size: 3vw;
+    }
 }

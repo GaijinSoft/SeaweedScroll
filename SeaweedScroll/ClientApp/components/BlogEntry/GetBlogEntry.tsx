@@ -44,7 +44,7 @@ class GetBlogEntry extends React.Component<BlogInfoProps, {}> {
                 else { // if (entryContents[i].type === "EntryPhoto")
                     var entryPhoto = (entryContents[i] as IEntryPhoto);
                     const src = require(`../../images/${entryPhoto.fileName}`);
-                    entryContentList.push(<EntryPhoto src={src} caption={entryPhoto.caption}/>);
+                    entryContentList.push(<EntryPhoto src={src} caption={entryPhoto.caption} height={entryPhoto.height}/>);
                 }
             }
             return (
