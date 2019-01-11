@@ -12,6 +12,7 @@ import { ApplicationState } from '../../store';
 import { BlogEntry } from './BlogEntry';
 import * as IEntryState from '../../store/BlogInfo';
 import {IEntryContentContainer, IEntryParagraph, IEntryPhoto} from '../../store/BlogInfo';
+import { BlogTileContainer } from '../BlogTile/BlogTileContainer';
 import { BlogTile } from '../BlogTile/BlogTile';
 import { TileImage } from '../BlogTile/TileImage';
 import { TileTitle } from '../BlogTile/TileTitle';
@@ -103,7 +104,11 @@ class GetBlogEntry extends React.Component<BlogInfoProps, {}> {
                 </BlogTile>
             );
         }
-        return tileList;
+        return (
+            <BlogTileContainer>
+                {tileList}
+            </BlogTileContainer>
+        );
     }
 
     public render() {

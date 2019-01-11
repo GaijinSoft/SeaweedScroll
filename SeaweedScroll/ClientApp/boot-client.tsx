@@ -1,5 +1,6 @@
 import './css/site.css';
 import './components/BlogEntry/BlogEntryStyle.css';
+import './components/BlogTile/BlogTileStyle.css';
 import 'bootstrap';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
