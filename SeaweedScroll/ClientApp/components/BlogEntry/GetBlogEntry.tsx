@@ -12,6 +12,9 @@ import { ApplicationState } from '../../store';
 import { BlogEntry } from './BlogEntry';
 import * as IEntryState from '../../store/BlogInfo';
 import {IEntryContentContainer, IEntryParagraph, IEntryPhoto} from '../../store/BlogInfo';
+import { BlogTile } from '../BlogTile/BlogTile';
+import { TileImage } from '../BlogTile/TileImage';
+import { TileTitle } from '../BlogTile/TileTitle';
 
 // At runtime, Redux will merge together...
 type BlogInfoProps =
@@ -32,35 +35,91 @@ class GetBlogEntry extends React.Component<BlogInfoProps, {}> {
         this.props.requestBlogEntry(entryDateId);
     }
 
-    public render() {
-        if (this.props && this.props.entries && this.props.entries.length > 0) {
-            var entry = this.props.entries[0];
-            var bannerImg = require(`../../images/${entry.bannerImageFileName}`);
-            var entryContents = entry.entryContentContainer.entryContents;
-            var entryContentList = [];
-            for (var i = 0; i < entryContents.length; ++i) {
-                if (entryContents[i].type === "EntryParagraph")
-                    entryContentList.push(<EntryParagraph>{(entryContents[i] as IEntryParagraph).text}</EntryParagraph>);
-                else { // if (entryContents[i].type === "EntryPhoto")
-                    var entryPhoto = (entryContents[i] as IEntryPhoto);
-                    const src = require(`../../images/${entryPhoto.fileName}`);
-                    entryContentList.push(<EntryPhoto src={src} caption={entryPhoto.caption} height={entryPhoto.height}/>);
-                }
+    private GetSelectedEntry(): IEntryState.IEntry | null {
+        if (this.props.entryDateId === 0)
+            return this.props.entries[0];
+        else {
+            var entries = this.props.entries;
+            for (var i = 0; i < entries.length; ++i) {
+                if (entries[i].id === this.props.entryDateId)
+                    return entries[i];
             }
-            return (
-                <BlogEntry>
-                    <BannerImage src={bannerImg} />
-                    <Title>{entry.title}</Title>
-                    <EntryInfo stringDate={entry.stringDate} />
-                    <hr id="titleSeparator" />
-                    <EntryContent>
-                        {entryContentList}
-                    </EntryContent>
-                </BlogEntry>
+        }
+        return null;
+    }
+
+    private GetEntriesWithoutSelectedEntry(): IEntryState.IEntry[] {
+        var entries = this.props.entries;
+        for (var i = 0; i < entries.length; ++i) {
+            if (entries[i].id === this.props.entryDateId) {
+                entries.splice(i, 1);
+                return entries;
+            }
+        }
+        return [];
+    }
+
+    private SomethingWentWrong() {
+        return <div>Something went wrong. No blog entry found!</div>;
+    }
+
+    private RenderSelectedEntry(entry: IEntryState.IEntry) {
+        var bannerImg = require(`../../images/${entry.bannerImageFileName}`);
+        var entryContents = entry.entryContentContainer.entryContents;
+        var entryContentList = [];
+        for (var i = 0; i < entryContents.length; ++i) {
+            if (entryContents[i].type === "EntryParagraph")
+                entryContentList.push(<EntryParagraph>{(entryContents[i] as IEntryParagraph).text}</EntryParagraph>);
+            else { // if (entryContents[i].type === "EntryPhoto")
+                var entryPhoto = (entryContents[i] as IEntryPhoto);
+                const src = require(`../../images/${entryPhoto.fileName}`);
+                entryContentList.push(<EntryPhoto src={src} caption={entryPhoto.caption} height={entryPhoto.height}/>);
+            }
+        }
+        return (
+            <BlogEntry>
+                <BannerImage src={bannerImg}/>
+                <Title>{entry.title}</Title>
+                <EntryInfo stringDate={entry.stringDate}/>
+                <hr id="titleSeparator"/>
+                <EntryContent>
+                    {entryContentList}
+                </EntryContent>
+            </BlogEntry>
+        );
+    }
+
+    private RenderOtherEntryTiles() {
+        var entries = this.GetEntriesWithoutSelectedEntry();
+        var tileList = [];
+        if (entries.length === 0)
+            return;
+        for (var i = 0; i < entries.length; ++i) {
+            var bannerImg = require(`../../images/${entries[i].bannerImageFileName}`);
+            tileList.push(
+                <BlogTile>
+                    <TileImage src={bannerImg} />
+                    <TileTitle>{entries[i].title}</TileTitle>
+                </BlogTile>
             );
         }
-        else
-            return <div>Sorry dude</div>;
+        return tileList;
+    }
+
+    public render() {
+        // Fetch selected entry, handle null cases
+        if (!this.props || !this.props.entries || this.props.entries.length < 1)
+            return this.SomethingWentWrong();
+        var entry = this.GetSelectedEntry();
+        if (entry == null)
+            return this.SomethingWentWrong();
+
+        return (
+            <div>
+                {this.RenderSelectedEntry(entry)}
+                {this.RenderOtherEntryTiles()}
+            </div>
+        );
     }
 }
 

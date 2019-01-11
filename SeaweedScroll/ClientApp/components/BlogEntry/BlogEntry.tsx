@@ -8,7 +8,7 @@ import { EntryPhoto } from './EntryPhoto';
 import { NavLink, Link } from 'react-router-dom';
 import { Banner } from '../Banner';
 
-const img = require('../../images/ball-blur-bokeh-717988.jpg');
+//const img = require('../../images/ball-blur-bokeh-717988.jpg');
 
 export class BlogEntry extends React.Component {
     constructor(props: any) {
