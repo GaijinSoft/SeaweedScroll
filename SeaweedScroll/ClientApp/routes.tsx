@@ -13,7 +13,6 @@ export const routes = <Layout>
         <Route exact path='/' component={GetBlogEntry} />
         <Route path='/Support' component={Support} />
         <Route path='/Adventures/:entryDateId?' component={GetBlogEntry} />
-        <Route path='/fetchdata/:startDateIndex?' component={ FetchData } />
         <Route component={NotFound} />
     </Switch>
 </Layout>;

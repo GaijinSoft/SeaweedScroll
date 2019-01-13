@@ -5,9 +5,13 @@ export class TileTitle extends React.Component<any, any> {
         super(props);
     }
 
+    goToBlogEntry() {
+        this.context.router.transitionTo(`/Support`);
+    }
+
     render() {
         return (
-            <div className="TileTitle">
+            <div className="TileTitle" onClick={this.goToBlogEntry}>
                 { this.props.children }
             </div>
         );

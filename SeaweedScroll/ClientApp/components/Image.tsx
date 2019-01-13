@@ -9,10 +9,13 @@ export class Image extends React.Component<any, any> {
         const styles = {
             'background-image': `url("${this.props.src}")`,
             'background-repeat': 'no-repeat',
-            'background-size': 'cover'
+            'background-position': 'center',
+            'background-size': 'contain'
     };
         return (
-            <div style={Object.assign({}, styles, this.props.styles)} id={this.props.identifier} className={this.props.styleName} />
+            <div style={Object.assign({}, styles, this.props.styles)} id={this.props.identifier} className={this.props.styleName}>
+                {this.props.children}
+            </div>
         );
     }
 }

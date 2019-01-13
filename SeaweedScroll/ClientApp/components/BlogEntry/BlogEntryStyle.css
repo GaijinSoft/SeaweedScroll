@@ -1,7 +1,8 @@
 ﻿#BlogEntry {
     display: grid;
     grid-template-columns: 2vw repeat(16, 6vw) 2vw;
-    grid-template-rows: 40vw 5vw 1vw 5vw 40vw;
+    grid-template-rows: 40vw 5vw 1vw 5vw;
+    margin-bottom: 15vw;
 }
 
 #BannerImg {
@@ -53,15 +54,17 @@
 
 .EntryPhotoContainer {
     grid-column: 4/14;
+    padding-bottom: 4vw;
 }
 
 @media (max-width: 767px) {
     #BlogEntry {
-        grid-template-rows: 60vw 12vw 6vw 5vw 65vw;
+        grid-template-rows: 60vw 12vw 6vw 5vw;
+        margin-bottom: 25vw;
     }
 
     #Title {
-        font-size: 10vw;
+        font-size: 6vw;
     }
 
     #EntryInfo {

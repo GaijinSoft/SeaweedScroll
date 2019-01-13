@@ -30,19 +30,25 @@ class GetBlogEntry extends React.Component<BlogInfoProps, {}> {
         this.props.requestBlogEntry(entryDateId);
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     componentWillReceiveProps(nextProps: BlogInfoProps) {
+        window.scrollTo(0, 0);
         // This method runs when incoming props (e.g., route params) change
         let entryDateId = parseInt(this.props.match.params.entryDateId) || 0;
         this.props.requestBlogEntry(entryDateId);
     }
 
     private GetSelectedEntry(): IEntryState.IEntry | null {
-        if (this.props.entryDateId === 0)
+        var entryDateId = parseInt(this.props.match.params.entryDateId) || 0;
+        if (entryDateId === 0)
             return this.props.entries[0];
         else {
             var entries = this.props.entries;
             for (var i = 0; i < entries.length; ++i) {
-                if (entries[i].id === this.props.entryDateId)
+                if (entries[i].id === entryDateId)
                     return entries[i];
             }
         }
@@ -50,9 +56,11 @@ class GetBlogEntry extends React.Component<BlogInfoProps, {}> {
     }
 
     private GetEntriesWithoutSelectedEntry(): IEntryState.IEntry[] {
-        var entries = this.props.entries;
+        var entries = this.props.entries.slice(0);
+        var entryDateId = parseInt(this.props.match.params.entryDateId) || 0;
+        entryDateId = entryDateId === 0 ? entries[0].id : entryDateId;
         for (var i = 0; i < entries.length; ++i) {
-            if (entries[i].id === this.props.entryDateId) {
+            if (entries[i].id === entryDateId) {
                 entries.splice(i, 1);
                 return entries;
             }
@@ -98,17 +106,19 @@ class GetBlogEntry extends React.Component<BlogInfoProps, {}> {
         for (var i = 0; i < entries.length; ++i) {
             var bannerImg = require(`../../images/${entries[i].bannerImageFileName}`);
             tileList.push(
-                <BlogTile>
-                    <TileImage src={bannerImg} />
-                    <TileTitle>{entries[i].title}</TileTitle>
+                <BlogTile dateId={entries[i].id}>
+                    <TileTitle dateId={entries[i].id}>{entries[i].title}</TileTitle>
+                    <TileImage dateId={entries[i].id} src={bannerImg} />
                 </BlogTile>
             );
         }
-        return (
-            <BlogTileContainer>
-                {tileList}
-            </BlogTileContainer>
-        );
+        if (tileList.length > 0) {
+            return (
+                <BlogTileContainer>
+                    {tileList}
+                </BlogTileContainer>
+            );
+        }
     }
 
     public render() {

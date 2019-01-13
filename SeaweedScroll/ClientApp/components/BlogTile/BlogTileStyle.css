@@ -1,3 +1,25 @@
 ﻿#BlogTileContainer {
     display: grid;
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: repeat(3, 30vw);
+    grid-column-gap: 3vw;
+    grid-row-gap: 2vw;
+    padding-left: 1vw;
+}
+
+/*.BlogTile:hover {
+    background-color: orange;
+}*/
+
+.TileImage {
+    width: 100%;
+    height: auto;
+}
+
+.TileTitle {
+    color: white;
+    font-size: 2.5vw;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-overflow: ellipsis;
 }

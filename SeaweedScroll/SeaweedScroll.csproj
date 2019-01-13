@@ -21,9 +21,6 @@
     <None Remove="ClientApp\components\Image.tsx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ClientApp\images" />
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="ClientApp\components\Image.tsx" />
   </ItemGroup>
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
