@@ -6,6 +6,34 @@ namespace SeaweedScroll.Models
     {
         public static List<Entry> Entries = new List<Entry>()
         {
+                        #region To Tokyo!
+            new Entry()
+            {
+                Id = 20190116,
+                BannerImageFileName = "aircraft-airplane-aviation-615060.jpg",
+                Title = "To Tokyo!",
+                StringDate = "January 16, 2018",
+                EntryContentContainer = new EntryContentContainer()
+                {
+                    EntryContents = new List<EntryContent>()
+                    {
+                        new EntryParagraph()
+                        {
+                            Text = "We can't believe it's finally here! We have been dreaming of this moment since we boarded our flight home from Kyoto just 2 years ago. We wanted to return right away, but God had so much to do in us before that could happen. We can't wait to see what will happen this week! The internet connection from our hotel room seems to be very strong, so praise God that there will be few complications! The flight in was rather simple, all things considered. Just a 1 hour flight to Toronto and a 13 hour and 20 minute flight to Tokyo. Then another hour-long bus ride to a place that was close enough to our hotel that we could afford a taxi. We were immediately greeted by the familiar excellent customer service that comes standard in Japan. I was pretty tired when we first got in, but when we saw the city, I knew I couldn't miss a second of it! We rode down through Shibuya and Shinjuku on our way to the train station, and it was pretty amazing to be greeted with the lights, the crowds, the narrow streets, the skyscrapers. All I could think of was, \"We're here, God. Use us for Your kingdom purposes!\""
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "After arriving at the hotel we had a light dinner at what I can only describe as a Japanese Denny's. It had a very similar vibe and look to it except they served Japanese \"diner\" food. Fun fact, Denny's actually does have some restaurants here in Tokyo (we saw them on our way in). I looked at the menu, and I'm afraid you won't find your American favorites in Japan!"
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "Before I go, just a few more things to share with you. First, I apologize in advance if some of our future posts take your web browser a while to load. Long story short, I ran out of time before the trip and wasn't able to speed up our website, so it might take a while to load some of these images. So please be patient, or if you are a programmer, feel free to fork my code (GaijinSoft SeaweedScroll) and push the solution :-). So excited to share what God does over the next several days with you! Love you all!"
+                        }
+                    }
+                }
+            },
+            #endregion
+
             #region Christmas Update
             new Entry()
             {
