@@ -6,6 +6,218 @@ namespace SeaweedScroll.Models
     {
         public static List<Entry> Entries = new List<Entry>()
         {
+                                    #region Kawaii & Tech
+            new Entry()
+            {
+                Id = 20190116,
+                BannerImageFileName = "DSC_0351.jpg",
+                Title = "Kawaii & Tech",
+                StringDate = "January 17, 2018",
+                EntryContentContainer = new EntryContentContainer()
+                {
+                    EntryContents = new List<EntryContent>()
+                    {
+                        new EntryParagraph()
+                        {
+                            Text = "Today was a very exciting day of exploration and discovery as we attempted to get as much sunlight as possible to rid ourselves of jetlag. Amanda and I will be switching off in this post as we are getting ready for the day. Finding time to blog has been tricky as we have been a bit busier than we thought we would be, and when we are back in the hotel there is so much to pray about and discuss. We managed to find an hour this morning though, and Google Photos did eventually cooperate with us. Anyway, let's get started!"
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "We decided to start our day by visiting the Meiji Jingu shrine. This is a shrine located in the heart of Shibuya which is a major shopping district in Tokyo. One of the great things about Japan is their appreciation for nature and their love of the environment. Real estate here may be some of the most expensive in the world. Shops frequently will build up rather than build out because it is cheaper to just build a second, third, or seventh floor than to rent a wider space. Yet, despite this, the Japanese refuse to compromise on getting rid of the lush greenery we saw oddly and peacefully situated in the midst of this bustling city."
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "Amanda and I posing on the long path to the shrine",
+                            FileName = "DSC_0369.jpg",
+                            Height = "75vw"
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "After a long walk to the center of the park, we were greeted by a gate and a hand washing station. The Japanese believe that it is improper to mix uchi (inside) with soto (outside). This is actually why they remove their shoes before entering the home."
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0371.jpg",
+                            Height = "75vw"
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0372.jpg",
+                            Height = "75vw"
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "Going inside the shrine, there were people lined up to offer their prayers. In the inner temple, there were many stations where people could drop coins and say prayers. The temple was built to worship the Meiji Emperor and Emperess. In the inner place of worship there were priests who were playing drums and performing a ceremony. When the people finished praying, they walked to the side and picked up their fortune (omikuji), then left. Before exiting the temple, they turned and bowed. Coming from the US, it was quite a site to see."
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0387.jpg",
+                            Height = "75vw"
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "We were not allowed to take pictures inside the place of worship, but we were allowed to take pictures of the inner temple itself. For performing these rituals, the Japanese will often consider themselves Shinto or Buddhist, but one of the things I've learned is that most Japanese consider themselves non-religious despite participating in these kinds of rituals. This is simply something that you do if you are Japanese. The true faith of the Japanese is being Japanese. They work hard and follow the way of the warrior (bushidou) because they are Japanese. They call themselves Shinto and Buddhist and go to the temple to pray that their wishes and dreams will be answered because they are Japanese and this is what Japanese do."
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "After leaving the temple, we went to a delicious ramen bar which had a line out the door. Despite this and the restaurant's excellent rating, we were able to get a seat within 30 minutes and the food was quite cheap. It was without a doubt the best ramen we've had!"
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "After lunch, we went to Takeshita street in Harajuku which is the epicenter of \"Kawaii\" or \"cute\"."
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0424.jpg",
+                            Height = "75vw"
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "It was definitely the most people I've ever seen in one place. This street was filled with everything outrageous and kawaii. From adorable and beautifully decorated deserts to outrageous sparkly fashion, we couldn't turn our necks fast enough to see everything there was to see. Here are just a few photos we snagged while being moved forwards in the sea of people."
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0427.jpg",
+                            Height = "75vw"
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0428.jpg",
+                            Height = "75vw"
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0431.jpg",
+                            Height = "75vw"
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0432.jpg",
+                            Height = "75vw"
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0433.jpg",
+                            Height = "75vw"
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0435.jpg",
+                            Height = "75vw"
+                        },
+
+                        new EntryParagraph()
+                        {
+                            Text = "A few of the places that we stopped at was Daiso, a 100 yen store (dollar store), a large toy store called Kiddy Land, and a cookie place called Cookie Time.  These stores were amazing and filled with all things cute and crazy."
+                        },
+
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0425.jpg",
+                            Height = "75vw"
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0443.jpg",
+                            Height = "75vw"
+                        },
+
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0449.jpg",
+                            Height = "75vw"
+                        },
+
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0438.jpg",
+                            Height = "75vw"
+                        },
+
+                        new EntryParagraph()
+                        {
+                            Text = "We stopped at the very famous Shibuya crossing.  This is know as one of the busiest places in the world.  We arrived around rush hour, and were able to see the streams of people rushing home from work."
+                        },
+
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0471.jpg",
+                            Height = "75vw"
+                        },
+
+                        new EntryParagraph()
+                        {
+                            Text = "Next we headed over to the bustling Akihabahara, the Electric Town of  Tokyo.  Here was saw streets lined with brightly colored neon signs, and many stores dedicated to games and celebrating technology.  Here are some of the places that we saw:"
+                        },
+
+
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0481.jpg",
+                            Height = "75vw"
+                        },
+
+
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0490.jpg",
+                            Height = "75vw"
+                        },
+
+
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0488.jpg",
+                            Height = "75vw"
+                        },
+
+
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0493.jpg",
+                            Height = "75vw"
+                        },
+
+
+                        new EntryPhoto()
+                        {
+                            Caption = "",
+                            FileName = "DSC_0505.jpg",
+                            Height = "75vw"
+                        },
+
+                        new EntryParagraph()
+                        {
+                            Text = "Throughout the day, we not only encountered alot of really cool and fun things, but also alot of sad things as well.  It was really sad to see these people praying futily to gods that do not listen, expressing themselves with crazy fashion because it is the ONLY way they can express their true self in their culture, and being so much more interested in technology, anime, school girls, and work than in relationships with people and with God.  This really hit us on our way back to the hotel.  We had to take a round about way with three different trains and alot of confusion.  Why? Because the main train line we needed to take was shut down due to a \"person related accident\". Most likely that meant someone had walked in front of a train and commited suicide.  It really hit home the fact that so many people will end they life because they feel that they have no purpose and nothing fulfills them they way only God could.  Japan is losing many people to saddness, loneliness, and overworking every year.  Please pray for the people of Japan and the missionaries and Christians who are trying to reach these people whom God loves so very dearly."
+                        },
+
+                        new EntryParagraph()
+                        {
+                            Text = "God Bless you all!"
+                        },
+                    }
+                }
+            },
+            #endregion
                         #region To Tokyo!
             new Entry()
             {
