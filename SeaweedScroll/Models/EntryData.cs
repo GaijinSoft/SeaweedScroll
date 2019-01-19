@@ -9,7 +9,7 @@ namespace SeaweedScroll.Models
                                     #region Kawaii & Tech
             new Entry()
             {
-                Id = 20190116,
+                Id = 20190117,
                 BannerImageFileName = "DSC_0351.jpg",
                 Title = "Kawaii & Tech",
                 StringDate = "January 17, 2018",
