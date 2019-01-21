@@ -6,7 +6,62 @@ namespace SeaweedScroll.Models
     {
         public static List<Entry> Entries = new List<Entry>()
         {
-                                    #region Kawaii & Tech
+            #region Finding a Team
+            new Entry()
+            {
+                Id = 20190120,
+                BannerImageFileName = "DSC_0564.jpg",
+                Title = "Finding a Team",
+                StringDate = "January 20, 2018",
+                EntryContentContainer = new EntryContentContainer()
+                {
+                    EntryContents = new List<EntryContent>()
+                    {
+                        new EntryParagraph()
+                        {
+                            Text = "These past few days have been particularly exciting to us and now that the internet seems to be cooperating, we’re able to share some of the details with you. While being a tourist and seeing the sites is certainly enjoyable, it has filled our hearts with joy to spend time with the contacts we have made throughout the years leading up to this trip. It has been quite the pleasure to see so many of these people in person that we’ve only e-mailed with. As you may know, we feel God pulling us towards online ministry to help the hikikomori (shut-ins of Japan). God has stretched and challenged these ideas and thoughts we’ve had while we have been here in Japan as we see the work He is already doing in Tokyo for His lost sheep."
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "Friday, we met with a contact, Andy, who we’ve been particularly excited to meet. Andy picked us up and took us to see a beautifully peaceful part of Japan, a lake which supplies most of Tokyo’s water supply. It was a gentle and calm place far from the bustling rush of the city."
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "A view of the mid-afternoon sun over the reservoir",
+                            FileName = "DSC_0523.jpg",
+                            Height = "75vw"
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "It was such a gentle place, that we all felt a bit lighter when we got back into the car. After this, Andy drove us to a cafe where we talked ministry. He challenged us to think bigger and shared with us his story of how he moved from caring for the hikikomori and those with mental health issues into church planting and creating material which the Japanese can use to share their faith and disciple one another. I can’t share the exact details on our website, but it’s definitely got us thinking about how to best utilize an online ministry to meet all the needs of the Japanese."
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "Later that day he took us to a more intimate gathering for his team in Higashikurume. This is one of the areas we’ve been prayerfully considering living in when we return for longer term. Two of their missionaries were returning home to the US after spending their whole lives on the field. When we opened the doors to the party room, we were greeted with a diverse gathering of people. Upon seeing us, we quickly lost track of who it was that was showing us around. Everyone was so excited to talk to us that each new person we met insisted on showing us around to all the other members of the team. It was a kind and warm welcome to their team. Their ministries were brilliant, creative, eclectic, and it was evident that God was changing hearts and lives through these humble, ordinary yet quirky folks. The party itself had a fine musk of life overseas, like walking into the home of a close friend. You could tell their lives were filled with the kind of dichotomous glory so evident in those who lay down their lives before the cross to be given something greater in return -- heartache yet joy, stress yet peace, difficulty yet freedom. It was authentic, and this is exactly what we had hoped to see on this vision trip. We talked about the organizational structure, heard many stories, sang songs, and witnessed the bitter-sweet tears of nostalgic reflection honoring these people who had spent their lives in service to God. It was truly a beautiful evening."
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "Saturday was quite an incredible day as well. By the providence of God, we managed to meet up with a friend from the Japanese church in Pittsburgh who happened to be in Japan for a period of time. He invited us to a tea party for an organization that mobilized Japanese into small groups for discipleship. We made friends, shared laughs, raised hands and worshipped in Japanese alongside our brothers and sisters who live 6700 miles away from us. It was a truly blessed time together. We encountered this back in our 2016 trip to Kyoto, but one of the things that was truly inspiring to us was the deep sincerity and overwhelming acceptance and friendship of the Japanese Christians. To be a Christian in Japan is largely seen as forsaking most things Japanese and risking the harmony of every relationship you have. These Christians are on the edge, their spirits are ablaze, and their hearts are for reaching their people. We were amazed at the number of small groups and small group leaders in the relatively tiny size of the group. Though about 90% of the afternoon was in nothing but Japanese (some of it more complicated than others), we made some bilingual friends who were happy to help us understand everything that was said. Besides the love, camaraderie, and sincerity of the Japanese Christians, what really struck me was the need for connection in Japanese society and the power of small groups to meet this need in a transformative way. Finding ways to connect the Japanese to one another through the Body of Christ I believe is a big part of what we will need to help facilitate if we want to see movements for Christ throughout this country. We had some wonderful conversations bouncing ideas off of other mission-minded believers about the power of technology and the internet in its potential to reach the lost. We are on the bleeding edge of learning to use technology to connect to one another in a meaningful way, so it is very exciting to dream of the possibilities. It seems God knew exactly what He was doing when He made Sam a very extroverted ENFJ (Myers’ Briggs) software engineer."
+                        },
+                        new EntryPhoto()
+                        {
+                            Caption = "Church announcements at the Japanese church",
+                            FileName = "IMG_9305.jpg",
+                            Height = "75vw"
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "Sunday, we met up with a ministry contact we had made a long time ago. His name, ironically, is also Andy. Sam had kept in touch with him all this time, so he couldn’t resist meeting him in person. We visited him at his church, and we got to enjoy one of his Sunday sermons. Afterwards, we had the chance to talk with one of his friends who is studying to be a social worker who had studied about the hikikomori. She presented us with some challenging questions which gave us a lot to pray about."
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "We want to truly thank you all for your support and your prayers. These last few days have been truly transformational. We’ve had questions answered and our ideas challenged. We’ve got a true flavor of life in Japan, and we’ve had most of our prayers on our Support page answered already. The missions partners that have been traveling with us on the trip have offered their blessing and have assured us of their confidence in us which has been deeply comforting. Amanda and I have been praying and when we look at each other at the end of the day, we both seem to feel the same way -- Japan just feels like home. We have been walking in step with the Holy Spirit for the last 4 years as He has guided us through this journey. Starting with baby steps, then taking longer and greater strides. It seems that God has given us His peace about this place, which is a significant answer to prayer. This trip has been a true blessing to us thus far, and we are so grateful that there is even more that God wants to show us. One of the prayers that we are still praying for is where exactly God is calling our family to live. We have a few ideas, but we hope that we can spend the next few days wrestling with these questions while we continue to spend time with the remaining contacts God has given us. Please keep us in your prayers. We have been busy running all around Tokyo, occasionally jumping on the wrong train, and actually meeting or exceeding the daily number of recommended steps (can you believe we’re supposed to walk 10,000 steps a day!?), but we have also found beautiful moments to appreciate and enjoy the culture and have fun. We will post those pictures as soon as we get them all uploaded! God bless you all. We love every last one of you!"
+                        },
+                    }
+                }
+            },
+            #endregion
+            #region Kawaii & Tech
             new Entry()
             {
                 Id = 20190117,
