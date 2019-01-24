@@ -6,6 +6,37 @@ namespace SeaweedScroll.Models
     {
         public static List<Entry> Entries = new List<Entry>()
         {
+            #region Life in Japan
+            new Entry()
+            {
+                Id = 20190124,
+                BannerImageFileName = "singingJapaneseChurch.jpg",
+                Title = "Life in Japan",
+                StringDate = "January 24, 2019",
+                EntryContentContainer = new EntryContentContainer()
+                {
+                    EntryContents = new List<EntryContent>()
+                    {
+                        new EntryParagraph()
+                        {
+                            Text = "Thank you for your continued prayer support! We believe God has answered our final prayer request in a number of ways. Monday we spent the first part of our day visiting my company’s Tokyo branch. I want to be careful what I share on a public website, so I would love to provide more specifics to you all in person. There is no official move to this office in the books quite yet, but when the time comes, we believe a move to this office may very well be possible. After a lot of prayer and talking with others, I do think that if I am able to transfer to this office, it would work out just fine! There are so many more details I long to share with you, but I will have to share them with you all in person. I will say that it will be very different than what I am accustomed to in our American offices, but I also believe that I am ready for the challenge."
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "Tuesday, our potential missionary partner (first Andy), took us to an onsen (or hot spring). Guys and girls were separated of course, but for those of you who don’t know, the onsen experience is a very “natural” one. We entered the building and were greeted with signs that explained rules such as “Please wash thoroughly before entering the bath” and “No tattoos permitted”. The second one can come as a kind of shock to foreigners especially because of the prevalence of tattoos in the US. In Japan, no one has tattoos except for members of the Japanese mafia, the yakuza. So by not allowing tattoos they try to make sure that there won’t be any issues or discomfort in the experience. So to go to the onsens, you have to bring two towels that are of a specific size. You take your shoes off before entering the wooden floors and put these in one locker, then you disrobe completely past the gender-separated area and put the rest of your valuables in another locker. After locking everything you are given a key on a bracelet that you can keep with you while you are there. Before entering any of the baths, you must sit at the washing stations. You are given a bucket and all kinds of shampoos, soaps, and conditioners, and a detachable shower head. Everything in the entire room is connected to a drain which is very nice because you can have some fun and dump the buckets out onto the floor when you’re done with them. After washing, there were multiple stations both inside and outside you could go to. There was a tepid station with the water at about 95 degrees that felt like warm bath water all the way up to the very hot bath that will leave you sweating. The baths also had minerals in them which created little bubbles on your skin which are good for your skin and are said to be good for your health. Outside was more of the same with some individual baths that were constantly overflowing that you could sit inside of. After spending too long in the very hot bath which caused me to sweat, I got very dizzy when I left, so I cooled off for a while and spent a while just talking with Andy. There was also one bath which was an ice water bath. Andy and I both took the plunge which was immediately very painful but you quickly got used to it and felt invigorated. After washing up once more to remove the minerals, we all reconveined as a group and felt nice and clean and refreshed. The entire experience was 90 minutes long, and despite all of the stations it cost a mere 600¥ (less than $6)!"
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "After returning from the onsen, Amanda and I decided to go on a nice date. We went to a conveyer belt sushi restaurant at a popular chain called Sushiro which was a lot of fun. Then we returned to the hotel and decided to see what the buzz was all about by watching Tidying Up with Marie Kondo (don’t judge). It was appropriate being in Japan because I hadn’t realized she was Japanese."
+                        },
+                        new EntryParagraph()
+                        {
+                            Text = "Yesterday was a much needed day of figuring out specifics of what life in Japan would look like. We met with two folks who have been living here for several months to years and asked them a lot of questions about life here in Japan. We also met with a Japanese realtor on the way, and I was able to speak just enough Japanese to figure out what potential options in Japan could look like. There were some reasonably priced options that were surprisingly large for what we would expect in Tokyo which was a huge relief to us. We asked our friends so many questions from living expenses and how fast the internet was to asking how to make friends in Japan and how to balance work and ministry. We felt quite satisfied with the answers that we received and our contacts were incredibly helpful. At the end of the day we realized that we can’t figure out everything right now, but to have so many of our questions answered gave us an important sense of confidence. I’ve got to run for the day. Thank you all so much for your prayers. God is so incredibly good! God bless you all!"
+                        }
+                    }
+                }
+            },
+            #endregion
             #region Finding a Team
             new Entry()
             {
@@ -273,7 +304,7 @@ namespace SeaweedScroll.Models
                 }
             },
             #endregion
-                        #region To Tokyo!
+            #region To Tokyo!
             new Entry()
             {
                 Id = 20190116,
@@ -300,7 +331,6 @@ namespace SeaweedScroll.Models
                 }
             },
             #endregion
-
             #region Christmas Update
             new Entry()
             {
